@@ -1,0 +1,148 @@
+html, body{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(#572A84,black);
+    /* height: 100%; */
+    /* image-resolution: 60%; */
+}
+
+header{
+    /* position: relative; */
+    width: 80%;
+    /* outline: 1px solid red; */
+    display: flex;
+    /* justify-content: end; */
+    margin: 0 auto;
+
+    /* color:white; */
+    /* font: Rounded Mplus 1c Bold, roboto bold, sans-serif; */
+}
+
+.logo{
+    /* outline: 1px solid red; */
+    height: 8rem;
+    width: 8rem;
+    /* width:10%; */
+    padding: 0, 1rem;
+
+}
+.top-nav{
+    /* position: absolute; */
+    width: 90%;
+    display:flex;
+    /* outline: 1px solid red; */
+    justify-content:end;
+    font-family: Arial round, open sans;
+    font-size: 1.5rem;
+    align-items:flex-start;
+    margin-top: 0;
+
+}
+.nav-menu{
+    /* outline: 1px solid red; */
+    list-style:none;
+    display:flex;
+    /* justify-content: flex-end; */
+    padding: 1.5rem;
+    align-content: flex-start;
+    /* align-items: flex-start; */
+
+}
+
+body{
+    width: 100%;
+    /* background-image: linear-gradient(#572A84,black); */
+    /* background-image: url(file:///C:/coding/111%20UX%20UI%20Course/Portfolio/portfolio-web-design/images/background-scratches.png); */
+    background-repeat: no-repeat;
+    color: white;
+    font-family: Arial round, open sans;    
+}
+
+.hero-banner{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction:column;
+    margin: 8rem;
+    align-items: center;
+    line-height: 3rem;
+    font-family: Arial;
+    letter-spacing: 2px;
+}
+h1{
+    font-size: 3.5rem;
+}
+h2{
+    font-size: 3rem;
+}
+h3, p{
+    font-size: 2rem;
+    padding: 0;
+}
+
+button{
+    display: flex;
+    margin: auto;
+    width: 6rem;
+    height: 2rem;
+
+}
+.cards{
+    display:flex;
+    justify-content: center;
+    flex-flow: wrap;
+ 
+}
+.rdasa, .cer, .mytradie {
+    /* outline: 1px solid red; */
+    max-width: 1280px;
+    max-height: 677px;
+    display: inline-flex;
+    /* border-radius: 20px; */
+    margin-top: 2rem;
+
+}
+.case-study{
+    /* outline: 1px solid red; */
+    max-width: 800px;
+    max-height:fit-content;
+    background-color: black;
+    padding: 1.5rem;
+    /* display: inline-flex; */
+    /* margin: auto; */
+    
+}
+.rdasa, .mytradie img{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.rdasa, .mytradie .case-study{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.cer .case-study{
+    order: -1;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+h4{
+    font-size: 2.5rem;
+    weight: 600px;
+}
+p.cards{
+    font-size: 1.5rem;
+}
+.background-scratches{
+    position: absolute;
+    opacity: 60%;
+}
+footer .inline-block{
+/* color: white */
+/* background-color: white; */
+}
+
+
+
+
