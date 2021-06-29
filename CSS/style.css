@@ -57,41 +57,49 @@ body{
     /* background-image: url(file:///C:/coding/111%20UX%20UI%20Course/Portfolio/portfolio-web-design/images/background-scratches.png); */
     background-repeat: no-repeat;
     color: white;
-    font-family: Arial round, open sans;    
+    font-family: Arial round, open sans;  
+    opacity: .9;  
 }
 
 .hero-banner{
     display: flex;
     /* justify-content: center; */
     flex-direction:column;
-    margin: 8rem;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
     align-items: center;
-    line-height: 3rem;
+    line-height: 2rem;
     font-family: Arial;
     letter-spacing: 2px;
 }
 h1{
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 h2{
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 h3, p{
     font-size: 2rem;
     padding: 0;
 }
-
-button{
+.arrow{
     display: flex;
-    margin: auto;
-    width: 6rem;
-    height: 2rem;
-
+    justify-content: center;
+    /* margin-top: -11rem; */
+    margin-bottom: 10rem;
+}
+.arrow i{
+    /* position: center; */
+    /* margin: auto; */
+    color:#C5B101;
+    opacity: .8;
+    font-size: 4rem;
 }
 .cards{
     display:flex;
     justify-content: center;
     flex-flow: wrap;
+    z-index: 5;
  
 }
 .rdasa, .cer, .mytradie {
@@ -101,23 +109,24 @@ button{
     display: inline-flex;
     /* border-radius: 20px; */
     margin-top: 2rem;
+    z-index: 6;
 
 }
 .case-study{
     /* outline: 1px solid red; */
     max-width: 800px;
     max-height:fit-content;
-    background-color: black;
+    background-color: #3D2A52;
     padding: 1.5rem;
     /* display: inline-flex; */
     /* margin: auto; */
     
 }
-.rdasa, .mytradie img{
+.rdasa img, .mytradie img{
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
-.rdasa, .mytradie .case-study{
+.rdasa .case-study, .mytradie .case-study{
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -138,9 +147,49 @@ p.cards{
     position: absolute;
     opacity: 60%;
 }
-footer .inline-block{
-/* color: white */
-/* background-color: white; */
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    
+    
+}
+.socialIcons{
+    display: flex;
+    align-items: center;
+    
+}
+.socials{
+    display: flex;
+    /* justify-items: center; */
+    align-items: center;
+    /* justify-content: space-between; */
+    /* justify-self: space-around; */
+    /* padding:0;
+    Margin: 0; */
+    width: 2.5rem;
+    height:2.5rem;
+    background-color: white;
+    border-radius: 50%;
+    justify-content: center;
+    text-align:center;
+    
+}
+.socials+.socials{
+    margin-left: 1rem;
+}
+.behance i, .linkedIn i{
+    color: black;
+    font-size: 1.5rem;
+    display:flex;  
+
+}
+
+footer p{
+font-size: 1.5rem;
+padding-right: 2rem;
+
 }
 
 
