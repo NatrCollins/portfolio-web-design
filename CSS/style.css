@@ -204,6 +204,40 @@ margin: 0;
 }
 
 @media only screen and (max-width: 600px) {
+    .cards{
+        max-width: 580px;
+        flex-direction: column;
+        z-index: 5;
+    }
+    .case-study{
+        /* flex-direction: wrap; */
+        width: 100%;
+        /* max-height:fit-content; */
+        background-color: #3D2A52;
+        padding: 1rem;
+    }
+    .rdasa, .mytradie, .cer{
+        border-radius: none;
+    }
+
+    .rdasa img, .mytradie img, .cer img{
+        width: fit-content;
+        max-width: 100%;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius:0;
+    }
+
+    h4{
+        font-size: 1.5rem;
+        font-weight: 600px;
+    }
+
+    p.cards{
+        font-size: 1rem;
+    }
+    
 
 }
 
