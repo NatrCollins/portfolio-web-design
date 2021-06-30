@@ -1,11 +1,25 @@
 html, body{
     box-sizing: border-box;
-    width: 100%;
-    padding: 0;
     margin: 0;
-    background-image: linear-gradient(#572A84,black);
+    padding: 0;
+    /* border: 2px solid red; */
+    /* width: 100%; */
     /* height: 100%; */
-    /* image-resolution: 60%; */
+    /* width: max-content; */
+    /* height: 100% */
+    /* height: 100vh; */
+    /* height:max-height; */
+    
+}
+body{
+    /* padding: 0;
+    margin: 0; */
+    background-image: linear-gradient(#572A84,black);
+    background-repeat:no-repeat;
+    color: white;
+    font-family: Arial, open sans;  
+    opacity: .9;  
+    
 }
 
 header{
@@ -33,8 +47,8 @@ header{
     width: 90%;
     display:flex;
     /* outline: 1px solid red; */
-    justify-content:end;
-    font-family: Arial round, open sans;
+    justify-content:flex-end;
+    font-family: Arial, open sans;
     font-size: 1.5rem;
     align-items:flex-start;
     margin-top: 0;
@@ -44,22 +58,14 @@ header{
     /* outline: 1px solid red; */
     list-style:none;
     display:flex;
-    /* justify-content: flex-end; */
+    justify-content: flex-end;
     padding: 1.5rem;
-    align-content: flex-start;
+    /* align-content: flex-end; */
     /* align-items: flex-start; */
 
 }
 
-body{
-    width: 100%;
-    /* background-image: linear-gradient(#572A84,black); */
-    /* background-image: url(file:///C:/coding/111%20UX%20UI%20Course/Portfolio/portfolio-web-design/images/background-scratches.png); */
-    background-repeat: no-repeat;
-    color: white;
-    font-family: Arial round, open sans;  
-    opacity: .9;  
-}
+
 
 .hero-banner{
     display: flex;
@@ -138,7 +144,7 @@ h3, p{
 
 h4{
     font-size: 2.5rem;
-    weight: 600px;
+    font-weight: 600px;
 }
 p.cards{
     font-size: 1.5rem;
@@ -151,16 +157,20 @@ p.cards{
 footer{
     display: flex;
     justify-content: center;
-    margin-top: 5rem;
-    
-    
+    align-items: center;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    /* position: relative;
+    bottom: 0; */
+    /* bottom: 0; */  
 }
+
 .socialIcons{
     display: flex;
-    align-items: center;
-    
+    /* align-content: flex-start; */
 }
 .socials{
+    
     display: flex;
     /* justify-items: center; */
     align-items: center;
@@ -174,11 +184,12 @@ footer{
     border-radius: 50%;
     justify-content: center;
     text-align:center;
-    
 }
+
 .socials+.socials{
     margin-left: 1rem;
 }
+
 .behance i, .linkedIn i{
     color: black;
     font-size: 1.5rem;
@@ -189,9 +200,12 @@ footer{
 footer p{
 font-size: 1.5rem;
 padding-right: 2rem;
-
+margin: 0;
 }
 
+@media only screen and (max-width: 600px) {
+
+}
 
 
 
