@@ -22,6 +22,8 @@ body{
     
 }
 
+  
+
 header{
     /* position: relative; */
     width: 80%;
@@ -49,7 +51,7 @@ header{
     /* outline: 1px solid red; */
     justify-content:flex-end;
     font-family: Arial, open sans;
-    font-size: 1.5rem;
+    font-size: 1rem;
     align-items:flex-start;
     margin-top: 0;
 
@@ -105,22 +107,22 @@ h3, p{
     display:flex;
     justify-content: center;
     flex-flow: wrap;
-    z-index: 5;
+    z-index: 2;
  
 }
 .rdasa, .cer, .mytradie {
     /* outline: 1px solid red; */
-    max-width: 1280px;
-    max-height: 677px;
+    max-width: 70rem;
+    max-height: 38rem;
     display: inline-flex;
     /* border-radius: 20px; */
     margin-top: 2rem;
-    z-index: 6;
+    z-index: 2;
 
 }
 .case-study{
     /* outline: 1px solid red; */
-    max-width: 800px;
+    max-width: 60rem;
     max-height:fit-content;
     background-color: #3D2A52;
     padding: 1.5rem;
@@ -129,9 +131,15 @@ h3, p{
     
 }
 .rdasa img, .mytradie img{
+    max-height: 38rem;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
+
+.cer img{
+    max-height: 38rem;
+}
+
 .rdasa .case-study, .mytradie .case-study{
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -143,7 +151,7 @@ h3, p{
 }
 
 h4{
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: 600px;
 }
 p.cards{
