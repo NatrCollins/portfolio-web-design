@@ -161,6 +161,10 @@ p.cards{
     font-size: 1.5rem;
 }
 
+.cards *>{
+z-index:3;
+}
+
 .hoverCard, .rdasa{
     /* display:none; */
     background-color: black;
@@ -179,7 +183,7 @@ p.cards{
 .background-scratches{
     position: absolute;
     opacity: 60%;
-    z-index: .5;
+    z-index: -.1;
 }
 
 footer{
