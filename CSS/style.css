@@ -179,6 +179,7 @@ p.cards{
 .background-scratches{
     position: absolute;
     opacity: 60%;
+    z-index: .5;
 }
 
 footer{
