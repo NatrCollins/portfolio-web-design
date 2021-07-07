@@ -3,7 +3,7 @@ html, body{
     margin: 0;
     padding: 0;
     /* border: 2px solid red; */
-    /* width: 100%; */
+    width: 100%;
     /* height: 100%; */
     /* width: max-content; */
     /* height: 100% */
@@ -12,8 +12,7 @@ html, body{
 }
 
 body{
-    /* padding: 0;
-    margin: 0; */
+    position: relative;
     background-image: linear-gradient(#572A84,black);
     background-repeat:no-repeat;
     color: white;
@@ -39,6 +38,7 @@ header{
     width: 8rem;
     /* width:10%; */
     padding: 0, 1rem;
+    z-index: 1;
 
 }
 .top-nav{
@@ -51,6 +51,7 @@ header{
     font-size: 1rem;
     align-items:flex-start;
     margin-top: 0;
+    z-index: 1;
 
 }
 .nav-menu{
@@ -72,82 +73,130 @@ header{
     margin-bottom: 8rem;
     align-items: center;
     line-height: 2rem;
-    font-family: Arial;
+    font-family: Arial, open sans;
     letter-spacing: 2px;
+    z-index: 1;
 }
 
 h1{
     font-size: 3rem;
+    z-index: 1;
 }
 
 h2{
     font-size: 2.5rem;
+    z-index: 1;
 }
 
 h3, p{
     font-size: 2rem;
     padding: 0;
+    z-index: 1;
 }
 
 .arrow{
     display: flex;
     justify-content: center;
+    height: 100px;
     /* margin-top: -11rem; */
-    margin-bottom: 10rem;
+    margin-bottom: 20rem;
+
 }
 
 .arrow i{
-    /* position: center; */
-    /* margin: auto; */
     color:#C5B101;
     opacity: .8;
-    font-size: 4rem;
+    /* font-size: 4rem; */
 }
 
-.cards{
+#bounceMe {
+    animation: bounceArrow 1.2s infinite;
+  }
+
+  @keyframes bounceArrow {
+    from {
+      margin-top: 0px;
+    }
+    50%{
+      margin-top: 20px;
+    }
+    to {
+      margin-top: 0px;
+    }
+  }
+
+.cards-continer{
+    margin: auto;
     display:flex;
-    justify-content: center;
-    flex-flow: wrap;
-    z-index: 2;
+    max-width: 72rem;
+    /* justify-content: center;
+    flex-flow: wrap; */
+    /* z-index: 2; */
 }
 
-.rdasa, .cer, .mytradie {
+.card:nth-child(2n){
+    flex-direction: row-reverse;
+}
+
+.card {
     /* outline: 1px solid red; */
+    position: relative;
+    margin: auto;
     max-width: 70rem;
     max-height: 38rem;
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
     /* border-radius: 20px; */
     margin-top: 2rem;
     z-index: 2;
 }
 
-.case-study{
+.card .hoverCard{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 20px;
+  border-color: white;
+  box-shadow: 0 4px 10px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.hoverCard button{
+    padding: 20px 48px;
+    font-size: 1.8rem;
+    background-color: #572A84;
+    color: white;
+    border-radius: 15px;
+    border-color: white;
+    box-shadow: 0 1px 20px;
+}
+
+.card:hover .hoverCard{
+    display: flex;
+}
+
+.card-intro{
     /* outline: 1px solid red; */
     max-width: 60rem;
     max-height:fit-content;
     background-color: #3D2A52;
     padding: 1.5rem;
-    /* display: inline-flex; */
-    /* margin: auto; */
-}
-
-.rdasa img, .mytradie img{
-    max-height: 38rem;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-
-.cer img{
-    max-height: 38rem;
-}
-
-.rdasa .case-study, .mytradie .case-study{
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
-.cer .case-study{
-    order: -1;
+/* .card-intro:nth-of-type(2) {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+} */
+
+.card img{
+    max-height: 38rem;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -157,31 +206,14 @@ h4{
     font-weight: 600px;
 }
 
-p.cards{
+.card p{
     font-size: 1.5rem;
 }
 
-.cards *>{
-z-index:3;
-}
-
-.hoverCard, .rdasa{
-    /* display:none; */
-    background-color: black;
-    position: relative;
-    width: 100%;
-    height:100%;
-    opacity: 85%;
-    z-index: 8;
-    border-radius:20px;
- } 
-
- .rdasa:hover .hoverCard{
-     display:block;
- }
-
 .background-scratches{
     position: absolute;
+    width: 100%;
+    min-height: inherit;
     opacity: 60%;
     z-index: -.1;
 }
@@ -192,8 +224,7 @@ footer{
     align-items: center;
     margin-top: 8rem;
     margin-bottom: 8rem;
-    /* position: relative;
-    bottom: 0; */
+    /* position: relative; */
 }
 
 .socialIcons{
@@ -229,80 +260,100 @@ footer{
 }
 
 footer p{
-font-size: 1.5rem;
-padding-right: 2rem;
-margin: 0;
+    font-size: 1.5rem;
+    padding-right: 2rem;
+    margin: 0;
 }
 
 @media only screen and (max-width: 980px) {
-    .hero-banner{
-        display: flex;
-        justify-content:center;
-        flex-direction:column;
-        margin: 4rem;
-        /* align-items: center; */
-        line-height: 2rem;
-        letter-spacing: 2px;
-    }
-    h1{
-        font-size: 2.5rem;
-        line-height: 2.8rem;
-    }
-    h2{
-        font-size: 2rem;
-    }
-    h3, p{
-        font-size: 1.5rem;
-        padding: 0;
-    }
-    .cards{
-        /* display: block; */
-        max-width: 60rem;
-        /* flex-direction: wrap; */
-        z-index: 2;
-        /* justify-content: space-around; */
-    }
-    .case-study{
-        margin-bottom: 2rem;
-        max-width: 60rem;
-        height: 100%
+.hero-banner{
+    display: flex;
+    justify-content:center;
+    flex-direction:column;
+    margin: 4rem;
+    /* align-items: center; */
+    line-height: 2rem;
+    letter-spacing: 2px;
+}
 
-    }
-    .rdasa, .cer, .mytradie{
-        display: block;
-        margin-bottom: 6rem;;
-        border-radius: 0; 
-        max-width: 100%;
-     }
-
-    .rdasa img, .mytradie img, .cer img{
-        display: block;
-        max-width: 100%;
-        /* height: 100%; */
-        margin-top: 8rem;
-        border-top-right-radius: 20px;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius:0;
+h1{
+    font-size: 2.5rem;
+    line-height: 2.8rem;
     }
 
-    h4{
-        font-size: 1.5rem;
-        font-weight: 600px;
+h2{
+    font-size: 2rem;
     }
 
-    p.cards{
-        font-size: 1rem;
-    }
+h3, p{
+    font-size: 1.5rem;
+    padding: 0;
+}
 
-    .background-scratches{
-        position: absolute;
-        width: 100%;
-        height: 100%vh;
-        opacity: 60%;
-    }
+h4{
+    font-size: 1.5rem;
+    font-weight: 600px;
+}
+
+.cards-container{
+    /* border: 1px solid red; */
+    /* position: relative; */
+    margin: auto;
+    max-width: 36rem;
+    min-height: 100vh;
+}
+
+.card img{
+    max-width: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.card {
+    display: block;
+    margin: auto;
+    /* margin-top: 8rem; */
+    position: relative;
+    max-width: 100%;
+    max-height: inherit;
+    /* flex-direction: column; */
+    /* align-items: center; */
+}
+
+.hoverCard{
+    display: block;
+    /* position: absolute; */
+    max-width: 100%;
+    /* margin-top: 8rem; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+}
+    
+.card-intro{
+    max-width: 100%;
+    margin-top: -.2rem;
+    margin-bottom: 2rem;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+p.cards{
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.background-scratches{
+    position: absolute;
+    width: 100%;
+    min-height: inherit;
+    opacity: 60%;
+}
 
 footer{
+    /* margin-bottom: -1rem; */
     position:bottom;
 }
 }
