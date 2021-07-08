@@ -13,7 +13,7 @@ html, body{
 
 body{
     position: relative;
-    background-image: linear-gradient(black,#572A84,black);
+    background-image: linear-gradient(#572A84,black);
     background-repeat:no-repeat;
     color: white;
     font-family: Arial, open sans;  
@@ -164,6 +164,7 @@ h3, p{
   height: 100%;
   width: 100%;
 }
+
 .hoverCard button{
     padding: 20px 48px;
     font-size: 1.8rem;
@@ -188,13 +189,15 @@ h3, p{
     border-bottom-right-radius: 20px;
 }
 
-/* .card-intro:nth-of-type(2) {
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-} */
+.card:nth-of-type(2) .card-intro{
+    border-radius: 20px 0px 0px 20px ;
 
+}
+
+.card:nth-of-type(2) img{
+    border-radius: 0;
+
+}
 .card img{
     max-height: 38rem;
     border-top-left-radius: 20px;
@@ -332,12 +335,17 @@ h4{
     
 .card-intro{
     max-width: 100%;
-    margin-top: -.2rem;
+    margin-top: -.3rem;
     margin-bottom: 2rem;
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 0 0 20px 20px;
+
+}
+.card:nth-of-type(2) .card-intro{
+    border-radius: 0 0 20px 20px;
+}
+
+.card:nth-of-type(2) img{
+    border-radius: 20px 0 -0px 0;
 }
 
 p.cards{
