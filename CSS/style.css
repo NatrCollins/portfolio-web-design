@@ -13,7 +13,7 @@ html, body{
 
 body{
     position: relative;
-    background-image: linear-gradient(#572A84,black);
+    background-image: linear-gradient(black,#572A84,black);
     background-repeat:no-repeat;
     color: white;
     font-family: Arial, open sans;  
