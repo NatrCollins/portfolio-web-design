@@ -106,9 +106,10 @@ header{
     list-style:none;
     display:flex;
     justify-content: flex-end;
-    padding: 1.5rem;
+    padding: 1rem;
     cursor: pointer;
     color:var(--textAccent);
+    width: 120px;
     /* overflow: hidden; */
     /* align-content: flex-end; */
     /* align-items: flex-start; */
@@ -177,7 +178,7 @@ h3, p{
   }
 
 .cards-container h2 {
-    margin-left: 20%;
+    margin: auto;
 
 }
 
@@ -282,7 +283,7 @@ h4{
     width: 100%;
     min-height: inherit;
     opacity: 60%;
-    z-index: -.1;
+    z-index: -1;
 }
 
 .data-theme{
